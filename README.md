@@ -1,5 +1,7 @@
 # Red Squiggle
 
+![Red Squiggle demo](media/demo.gif)
+
 A Claude Code mod that type-checks and lints the file Claude just edited and puts any errors into that same tool result. The model sees broken types on the step that caused them, not three turns later when a test run fails.
 
 Red Squiggle runs after each successful Edit or Write. It skips edits that errored and edits staged for review.

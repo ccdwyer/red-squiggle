@@ -33,5 +33,6 @@
     "name": "Chris Dwyer",
     "url": "https://github.com/ccdwyer"
   },
-  "repository": "https://github.com/ccdwyer/red-squiggle"
+  "repository": "https://github.com/ccdwyer/red-squiggle",
+  "license": "MIT"
 }

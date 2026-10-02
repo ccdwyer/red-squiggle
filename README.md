@@ -37,3 +37,17 @@ Red Squiggle runs after each successful Edit or Write. It skips edits that error
 claude plugin validate .
 claude plugin test .
 ```
+
+## What it hooks
+
+Events this mod hooks, as `claude plugin validate` reads the module:
+
+- `tool.call`
+
+Engine calls it makes: `$.fs.exists`, `$.fs.read (via eslintPlan`, `readJson)`, `$.fs.stat (via canonical)`, `$.process.run (via run)`, `$.state.get`, `$.state.set`, `$.ui.status (via annotate)`.
+
+A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
+
+## License
+
+MIT

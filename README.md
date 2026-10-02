@@ -48,6 +48,14 @@ Engine calls it makes: `$.fs.exists`, `$.fs.read (via eslintPlan`, `readJson)`, 
 
 A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
 
+## Privacy
+
+It runs entirely on your machine. It sends nothing over the network. It runs your project's own `tsc`, `eslint` and `ruff`.
+
+The mod collects no analytics or telemetry, and its author receives no data from it.
+
+Full policy: [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT

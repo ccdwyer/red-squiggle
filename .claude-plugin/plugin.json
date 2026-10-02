@@ -1,0 +1,37 @@
+{
+  "name": "red-squiggle",
+  "version": "0.1.0",
+  "description": "Type-checks and lints the file Claude just edited and puts the errors in that same tool result",
+  "userConfig": {
+    "tsc": {
+      "type": "boolean",
+      "title": "TypeScript",
+      "description": "Run the project's local tsc (--noEmit, incremental) after TS/JS edits",
+      "default": true
+    },
+    "eslint": {
+      "type": "boolean",
+      "title": "ESLint",
+      "description": "Run the project's local eslint on the edited file when an eslint config exists",
+      "default": true
+    },
+    "ruff": {
+      "type": "boolean",
+      "title": "Ruff",
+      "description": "Run ruff check on edited Python files when ruff is installed",
+      "default": true
+    },
+    "timeoutSeconds": {
+      "type": "number",
+      "title": "Checker timeout (seconds)",
+      "description": "Each checker is abandoned after this long and the edit goes through unannotated",
+      "default": 30
+    }
+  },
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Chris Dwyer",
+    "url": "https://github.com/ccdwyer"
+  },
+  "repository": "https://github.com/ccdwyer/red-squiggle"
+}
